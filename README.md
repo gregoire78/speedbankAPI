@@ -8,6 +8,8 @@ ici la collection postman contenant des urls de test :
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/77f32a0384fcd2b459b2)
 
+[postman doc](https://documenter.getpostman.com/view/2287807/speedbank/77h5Nbr)
+
 Example d'une requête de création de l'utilisateur :
 
 ```http
