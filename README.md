@@ -27,7 +27,7 @@ Nos services comprennent:
  * ouvertures de comptes quand vous le souhaité
  * suivi de vos dépenses
 
-Ici un example de resultat pour un compte! :+1:
+Ici un exemple de resultat pour un compte! :+1:
 
 ```json
 [
