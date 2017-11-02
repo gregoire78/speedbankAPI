@@ -20,7 +20,7 @@ module.exports = Accounts = {
 
     push: function(req, res, next){
         console.log(req.body.id)
-        Account.findByIdAndUpdate(req.body.id, { $push : { mouvement: { price: req.body.price, description: req.body.description } } }, {new: true}, function (err, result) {
+        Account.findOneAndUpdate({_id:req.body.id, user: req.decoded.id }, { $push : { mouvement: { price: req.body.price, description: req.body.description } } }, {new: true}, function (err, result) {
             return res.json({'updated': result})
         });
     }
