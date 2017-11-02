@@ -28,7 +28,8 @@ module.exports = Accounts = {
     },
 
     getAccounts: function(req, res, next){
-        Account.findOne({_id: req.params.id, user: req.decoded.id}, { "mouvements" : 0 },function(err, result){
+        var projection = (req.query.mvt == 'true') ? { mouvements: true , user: true, name: true} : {mouvements: false};
+        Account.findOne({_id: req.params.id, user: req.decoded.id}, projection, function(err, result){
             if(result){
                 return res.json({success: true, 'updated': result})
             }

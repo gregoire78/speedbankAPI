@@ -27,6 +27,5 @@ var tokenAuth = function(req, res, next){
 router.post('/create', tokenAuth, Accounts.create);
 router.put('/add_mouvement', tokenAuth, Accounts.push);
 router.get('/:id', tokenAuth, Accounts.getAccounts);
-router.get('/get_mouvements/:id', tokenAuth, Accounts.getAccounts);
 
 module.exports = router;
