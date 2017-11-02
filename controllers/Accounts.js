@@ -21,7 +21,7 @@ module.exports = Accounts = {
     push: function(req, res, next){
         Account.findOneAndUpdate({ _id:req.body.id, user: req.decoded.id }, { $push : { mouvements: { price: req.body.price, description: req.body.description } } }, {new: true}, function (err, result) {
             if(result){
-                return res.json({success: true, 'updated': result})
+                return res.json(result)
             }
             return res.json({ success: false, message: 'Failed to save.' });
         });
@@ -31,9 +31,18 @@ module.exports = Accounts = {
         var projection = (req.query.mvt == 'true') ? { mouvements: true , user: true, name: true} : {mouvements: false};
         Account.findOne({_id: req.params.id, user: req.decoded.id}, projection, function(err, result){
             if(result){
-                return res.json({success: true, 'updated': result})
+                return res.json(result)
             }
             return res.json({ success: false, message: 'Failed to get account.' });
+        })
+    },
+
+    getAccountsForUser: function(req, res, next){
+        Account.find({user: req.decoded.id}, function(err, result){
+            if(result){
+                return res.json(result)
+            }
+            return res.json({ success: false, message: 'Failed to get' });
         })
     }
 };
