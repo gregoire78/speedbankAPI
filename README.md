@@ -1,20 +1,33 @@
-# $peedBank
+# $peedBank API
 
 **$peedbank** est la nouvelle banque du pauvre connecté grçace à son API ;)
 
 L'API REST est très simple d'utilisation et la sécurité y est irréprochable :p grâce aux token *[JWT](https://jwt.io/)*.
 
-ici la collection postman contenant des urls de test
+ici la collection postman contenant des urls de test :
+
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/77f32a0384fcd2b459b2)
+
+Example d'une requête de création de l'utilisateur :
+
+```http
+POST /users HTTP/1.1
+Host: murmuring-lowlands-37560.herokuapp.com
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+Postman-Token: 76de6964-6765-9ca1-3aaa-bfad5f3351c4
+
+firstname=Jacques&lastname=Martin&password=azerty1&email=nom%40gmail.com&city=paris&street=19+rue+de+provence&postal_code=78580&isdn=%2B33123456789
+```
 
 Have Fun with **$peedBank**, la banque rapide du future ,en dépit de la qualité, qui donnera envis aux pauvres d'épargner !!
 
-Notre service comprend:
+Nos services comprennent:
 
  * ouvertures de comptes quand vous le souhaité
  * suivi de vos dépenses
 
-And here's some account example! :+1:
+Ici un example de resultat pour un compte! :+1:
 
 ```json
 [
@@ -54,4 +67,12 @@ And here's some account example! :+1:
     }
 ]
 ```
+
+### BDD
+
+utilisation de mongodb avec mLab.
+
+### Deployement
+
+utilisation de heroku
  ### MERCI
