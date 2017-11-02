@@ -4,7 +4,8 @@ var Users = require('../controllers/Accounts');
 var Jwt = require('jsonwebtoken');
 
 var tokenAuth = function(req, res, next){
-    var token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+    var token = req.body.token || req.query.token || req.headers['x-access-token'] || req.headers['Authorization'] || req.get('authorization').split('Bearer ')[1];
     
     if (token) {
         Jwt.verify(token, 'batman', function(err, decoded) {      

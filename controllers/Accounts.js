@@ -19,9 +19,11 @@ module.exports = Accounts = {
     },
 
     push: function(req, res, next){
-        console.log(req.body.id)
-        Account.findOneAndUpdate({_id:req.body.id, user: req.decoded.id }, { $push : { mouvement: { price: req.body.price, description: req.body.description } } }, {new: true}, function (err, result) {
-            return res.json({'updated': result})
+        Account.findOneAndUpdate({ _id:req.body.id, user: req.decoded.id }, { $push : { mouvement: { price: req.body.price, description: req.body.description } } }, {new: true}, function (err, result) {
+            if(result){
+                return res.json({success: true, 'updated': result})
+            }
+            return res.json({ success: false, message: 'Failed to save.' });
         });
     }
 };
