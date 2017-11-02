@@ -75,4 +75,13 @@ utilisation de mongodb avec mLab.
 ### Deployement
 
 utilisation de heroku
- ### MERCI
+
+# Cahier des charges des besoins
+
+**$speedbank** est une banque où les client peuvent s'y connecter et ainsi visualiser leurs transactions de leurs différents comptes.
+
+# Répartition des besoins
+
+# Réalisation des Fronts
+
+### MERCI
