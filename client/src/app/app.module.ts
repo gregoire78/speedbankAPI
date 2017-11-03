@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { routes } from './app.router';
 import { AppComponent } from './app.component';
 import { DepenseComponent } from './depense/depense.component';
+import { LoginComponent } from './login/login.component';
 
 import { DepenseService} from './depense.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    DepenseComponent
+    DepenseComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
