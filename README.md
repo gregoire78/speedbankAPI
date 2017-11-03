@@ -1,6 +1,6 @@
 # $peedBank API
 
-**$peedbank** est la nouvelle banque du pauvre connecté grçace à son API ;)
+**$peedbank** est la nouvelle banque du pauvre connecté grâce à son API ;)
 
 L'API REST est très simple d'utilisation et la sécurité y est irréprochable :p grâce aux token *[JWT](https://jwt.io/)*.
 
@@ -76,11 +76,11 @@ utilisation de mongodb avec mLab.
 
 ### Deployement
 
-utilisation de heroku
+utilisation de heroku: lien api : [](https://blooming-bayou-61041.herokuapp.com)
 
 # Cahier des charges des besoins
 
-**$speedbank** est une banque où les client peuvent s'y connecter et ainsi visualiser leurs transactions de leurs différents comptes.
+**$speedbank** est une banque où les clients peuvent s'y connecter et ainsi visualiser leurs transactions de leurs différents comptes.
 
 # Répartition des besoins
 
