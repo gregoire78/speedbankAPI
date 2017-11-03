@@ -76,7 +76,7 @@ utilisation de mongodb avec mLab.
 
 ### Deployement
 
-utilisation de heroku: lien api : [](https://blooming-bayou-61041.herokuapp.com)
+utilisation de heroku: lien api : [https://blooming-bayou-61041.herokuapp.com](https://blooming-bayou-61041.herokuapp.com)
 
 # Cahier des charges des besoins
 
